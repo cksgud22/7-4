@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f1f1f1;
+            padding: 100px;
+            text-align: center;
+        }
+
+        .box {
+            display: inline-block;
+            transform-style: preserve-3d;
+            perspective: 1000px;
+        }
+
+        .flip {
+            position: relative;
+            width: 300px;
+            height: 400px;
+            transition: all 1s;
+            transform-style: preserve-3d;
+        }
+
+        .box:hover .flip {
+            transform: rotateY(180deg);
+        }
+
+        .face {
+            width: 300px;
+            height: 400px;
+            line-height: 400px;
+            text-align: center;
+            font-size: 50px;
+            position: absolute;
+            backface-visibility: hidden;
+            border-radius: 20px;
+            border: 5px solid black;
+
+        }
+
+        .front {
+            background-color: springgreen;
+        }
+
+        .back {
+            background-color: pink;
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+        <div class="flip">
+            <div class="face front">앞면</div>
+            <div class="face back">뒷면</div>
+        </div> <!-- flip -->
+    </div> <!-- box -->
+
+    <div class="box">
+        <div class="flip">
+            <div class="face front">앞면</div>
+            <div class="face back">뒷면</div>
+        </div> <!-- flip -->
+    </div> <!-- box -->
+
+    <div class="box">
+        <div class="flip">
+            <div class="face front">앞면</div>
+            <div class="face back">뒷면</div>
+        </div> <!-- flip -->
+    </div> <!-- box -->
+
+    <div class="box">
+        <div class="flip">
+            <div class="face front">앞면</div>
+            <div class="face back">뒷면</div>
+        </div> <!-- flip -->
+    </div> <!-- box -->
+
+</body>
+
+</html>
